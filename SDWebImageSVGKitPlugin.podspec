@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'SDWebImageSVGKitPlugin'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of SDWebImageSVGKitPlugin.'
+  s.summary          = 'A SVG coder plugin for SDWebImage, using SVGKit.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -21,22 +21,18 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/lizhuoli1126@126.com/SDWebImageSVGKitPlugin'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+  s.homepage         = 'https://github.com/SDWebImage/SDWebImageSVGKitPlugin'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'lizhuoli1126@126.com' => 'lizhuoli1126@126.com' }
-  s.source           = { :git => 'https://github.com/lizhuoli1126@126.com/SDWebImageSVGKitPlugin.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.source           = { :git => 'https://github.com/SDWebImage/SDWebImageSVGKitPlugin.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '8.0'
+  s.tvos.deployment_target = '9.0'
+  s.osx.deployment_target = '10.10'
 
-  s.source_files = 'SDWebImageSVGKitPlugin/Classes/**/*'
+  s.source_files = 'SDWebImageSVGKitPlugin/Classes/**/*', 'SDWebImageSVGKitPlugin/Module/SDWebImageSVGKitPlugin.h'
+  s.module_map = 'SDWebImageSVGKitPlugin/Module/SDWebImageSVGKitPlugin.modulemap'
   
-  # s.resource_bundles = {
-  #   'SDWebImageSVGKitPlugin' => ['SDWebImageSVGKitPlugin/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.dependency 'SDWebImage/Core', '~> 5.0'
+  s.dependency 'SVGKit', '>= 2.1'
 end
