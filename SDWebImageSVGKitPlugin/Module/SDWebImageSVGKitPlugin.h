@@ -14,6 +14,6 @@
 #import <SDWebImageSVGKitPlugin/SVGKImageView+WebCache.h>
 #import <SDWebImageSVGKitPlugin/SDWebImageSVGKitDefine.h>
 
-FOUNDATION_EXPORT double SDWebImageSVGCoderVersionNumber;
-FOUNDATION_EXPORT const unsigned char SDWebImageSVGCoderVersionString[];
+FOUNDATION_EXPORT double SDWebImageSVGKitPluginVersionNumber;
+FOUNDATION_EXPORT const unsigned char SDWebImageSVGKitPluginVersionString[];
 

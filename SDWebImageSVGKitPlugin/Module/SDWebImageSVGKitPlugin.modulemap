@@ -1,5 +1,5 @@
-framework module SDWebImageSVGCoder {
-  umbrella header "SDWebImageSVGCoder.h"
+framework module SDWebImageSVGKitPlugin {
+  umbrella header "SDWebImageSVGKitPlugin.h"
 
   export *
   module * { export * }
