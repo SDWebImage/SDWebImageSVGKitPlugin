@@ -152,5 +152,5 @@ void SDAdjustSVGContentMode(SVGKImage * svgImage, UIViewContentMode contentMode,
 }
 #endif
 
-SDWebImageContextOption _Nonnull const SDWebImageContextSVGImageSize = @"svgImageSize";
-SDWebImageContextOption _Nonnull const SDWebImageContextSVGImagePreserveAspectRatio = @"svgImagePreserveAspectRatio";
+SDWebImageContextOption _Nonnull const SDWebImageContextSVGKImageSize = @"svgkImageSize";
+SDWebImageContextOption _Nonnull const SDWebImageContextSVGKImagePreserveAspectRatio = @"svgkImagePreserveAspectRatio";

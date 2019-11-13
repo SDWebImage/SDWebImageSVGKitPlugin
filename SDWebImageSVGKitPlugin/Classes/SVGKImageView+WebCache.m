@@ -78,7 +78,7 @@
                            }
                            SVGKImage *svgImage;
                            if ([image isKindOfClass:[SDSVGKImage class]]) {
-                               svgImage = ((SDSVGKImage *)image).SVGImage;
+                               svgImage = ((SDSVGKImage *)image).SVGKImage;
                            }
                            if (svgImage) {
 #if SD_UIKIT

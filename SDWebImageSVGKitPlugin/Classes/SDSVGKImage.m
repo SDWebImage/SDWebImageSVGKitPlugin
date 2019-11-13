@@ -10,13 +10,13 @@
 
 @interface SDSVGKImage ()
 
-@property (nonatomic, strong, nullable) SVGKImage *SVGImage;
+@property (nonatomic, strong, nullable) SVGKImage *SVGKImage;
 
 @end
 
 @implementation SDSVGKImage
 
-- (instancetype)initWithSVGImage:(SVGKImage *)image {
+- (instancetype)initWithSVGKImage:(SVGKImage *)image {
     NSParameterAssert(image);
     UIImage *posterImage = image.UIImage;
 #if SD_UIKIT
@@ -26,7 +26,7 @@
 #endif
     self = [super initWithCGImage:posterImage.CGImage scale:posterImage.scale orientation:imageOrientation];
     if (self) {
-        self.SVGImage = image;
+        self.SVGKImage = image;
     }
     return self;
 }
@@ -63,8 +63,8 @@
     }
     // Check specified image size
     SDWebImageContext *context = options[SDImageCoderWebImageContext];
-    if (context[SDWebImageContextSVGImageSize]) {
-        NSValue *sizeValue = context[SDWebImageContextSVGImageSize];
+    if (context[SDWebImageContextSVGKImageSize]) {
+        NSValue *sizeValue = context[SDWebImageContextSVGKImageSize];
 #if SD_UIKIT
         CGSize imageSize = sizeValue.CGSizeValue;
 #else
@@ -74,7 +74,7 @@
             svgImage.size = imageSize;
         }
     }
-    return [self initWithSVGImage:svgImage];
+    return [self initWithSVGKImage:svgImage];
 }
 
 - (instancetype)initWithAnimatedCoder:(id<SDAnimatedImageCoder>)animatedCoder scale:(CGFloat)scale {

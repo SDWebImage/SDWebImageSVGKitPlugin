@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SDSVGKImage : UIImage <SDAnimatedImage>
 
-@property (nonatomic, strong, nullable, readonly) SVGKImage *SVGImage;
+@property (nonatomic, strong, nullable, readonly) SVGKImage *SVGKImage;
 
 /**
  Create the wrapper with specify `SVGKImage` instance. The instance should be nonnull.
@@ -21,7 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param image The `SVGKImage` instance
  @return An initialized object
  */
-- (nonnull instancetype)initWithSVGImage:(nonnull SVGKImage *)image;
+- (nonnull instancetype)initWithSVGKImage:(nonnull SVGKImage *)image;
 
 // This class override these methods from UIImage
 // You should use these methods to create a new SVG image. Use other methods just call super instead.

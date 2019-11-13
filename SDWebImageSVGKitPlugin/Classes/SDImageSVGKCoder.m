@@ -43,16 +43,16 @@
     BOOL preserveAspectRatio = YES;
     // Parse args
     SDWebImageContext *context = options[SDImageCoderWebImageContext];
-    if (context[SDWebImageContextSVGImageSize]) {
-        NSValue *sizeValue = context[SDWebImageContextSVGImageSize];
+    if (context[SDWebImageContextSVGKImageSize]) {
+        NSValue *sizeValue = context[SDWebImageContextSVGKImageSize];
 #if SD_UIKIT
         imageSize = sizeValue.CGSizeValue;
 #else
         imageSize = sizeValue.sizeValue;
 #endif
     }
-    if (context[SDWebImageContextSVGImagePreserveAspectRatio]) {
-        preserveAspectRatio = [context[SDWebImageContextSVGImagePreserveAspectRatio] boolValue];
+    if (context[SDWebImageContextSVGKImagePreserveAspectRatio]) {
+        preserveAspectRatio = [context[SDWebImageContextSVGKImagePreserveAspectRatio] boolValue];
     }
     
     if (!CGSizeEqualToSize(imageSize, CGSizeZero)) {
@@ -85,7 +85,7 @@
     if (![image isKindOfClass:SDSVGKImage.class]) {
         return nil;
     }
-    SVGKImage *svgImage = ((SDSVGKImage *)image).SVGImage;
+    SVGKImage *svgImage = ((SDSVGKImage *)image).SVGKImage;
     if (!svgImage) {
         return nil;
     }
