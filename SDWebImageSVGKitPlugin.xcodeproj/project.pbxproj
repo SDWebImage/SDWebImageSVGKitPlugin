@@ -204,9 +204,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		3212D887237BE87500F6C7DA /* SDWebImageSVGKitPlugin */ = {
+		3212D887237BE87500F6C7DA /* SDWebImageSVGKitPlugin iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3212D890237BE87500F6C7DA /* Build configuration list for PBXNativeTarget "SDWebImageSVGKitPlugin" */;
+			buildConfigurationList = 3212D890237BE87500F6C7DA /* Build configuration list for PBXNativeTarget "SDWebImageSVGKitPlugin iOS" */;
 			buildPhases = (
 				3212D883237BE87500F6C7DA /* Headers */,
 				3212D884237BE87500F6C7DA /* Sources */,
@@ -217,7 +217,7 @@
 			);
 			dependencies = (
 			);
-			name = SDWebImageSVGKitPlugin;
+			name = "SDWebImageSVGKitPlugin iOS";
 			productName = SDWebImageSVGKitPlugin;
 			productReference = 3212D888237BE87500F6C7DA /* SDWebImageSVGKitPlugin.framework */;
 			productType = "com.apple.product-type.framework";
@@ -291,7 +291,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3212D887237BE87500F6C7DA /* SDWebImageSVGKitPlugin */,
+				3212D887237BE87500F6C7DA /* SDWebImageSVGKitPlugin iOS */,
 				3212D8B4237BED7800F6C7DA /* SDWebImageSVGKitPlugin macOS */,
 				3212D8C1237BEDA800F6C7DA /* SDWebImageSVGKitPlugin tvOS */,
 			);
@@ -655,7 +655,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3212D890237BE87500F6C7DA /* Build configuration list for PBXNativeTarget "SDWebImageSVGKitPlugin" */ = {
+		3212D890237BE87500F6C7DA /* Build configuration list for PBXNativeTarget "SDWebImageSVGKitPlugin iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3212D891237BE87500F6C7DA /* Debug */,

@@ -16,7 +16,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3212D887237BE87500F6C7DA"
                BuildableName = "SDWebImageSVGKitPlugin.framework"
-               BlueprintName = "SDWebImageSVGKitPlugin"
+               BlueprintName = "SDWebImageSVGKitPlugin iOS"
                ReferencedContainer = "container:SDWebImageSVGKitPlugin.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -52,7 +52,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3212D887237BE87500F6C7DA"
             BuildableName = "SDWebImageSVGKitPlugin.framework"
-            BlueprintName = "SDWebImageSVGKitPlugin"
+            BlueprintName = "SDWebImageSVGKitPlugin iOS"
             ReferencedContainer = "container:SDWebImageSVGKitPlugin.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
