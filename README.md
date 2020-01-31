@@ -10,6 +10,8 @@
 ## What's for
 SDWebImageSVGKitPlugin is a SVG coder plugin for [SDWebImage](https://github.com/rs/SDWebImage/) framework, which provide the image loading support for [SVG](https://en.wikipedia.org/wiki/Scalable_Vector_Graphics) using [SVGKit](https://github.com/SVGKit/SVGKit) SVG engine.
 
+Note: iOS 13+/macOS 10.15+ supports native SVG rendering (called [Symbol Image](https://developer.apple.com/documentation/uikit/uiimage/configuring_and_displaying_symbol_images_in_your_ui/)), with system framework to load SVG. Check [SDWebImageSVGCoder](https://github.com/SDWebImage/SDWebImageSVGCoder) for more information.
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
@@ -18,9 +20,9 @@ You can modify the code or use some other SVG files to check the compatibility.
 
 ## Requirements
 
-+ iOS 8
-+ tvOS 9
-+ macOS 10.10
++ iOS 8+
++ tvOS 9+
++ macOS 10.10+
 
 ## Installation
 
@@ -53,7 +55,7 @@ github "SDWebImage/SDWebImageSVGKitPlugin"
 
 To use SVG coder, you should firstly add the `SDImageSVGKCoder` to the coders manager. Then you can call the View Category method to start load SVG images.
 
-Because SVG is a [vector image](https://en.wikipedia.org/wiki/Vector_graphics) format, which means it does not have a fixed bitmap size. However, `UIImage` or `CGImage` are all [bitmap image](https://en.wikipedia.org/wiki/Raster_graphics). For `UIImageView`, we will only parse SVG with a fixed image size (from the SVG viewPort information). But we also support you to specify a desired size during image loading using `SDWebImageContextSVGKImageSize` context option. And you can specify whether or not to keep aspect ratio during scale using `SDWebImageContextSVGKImagePreserveAspectRatio` context option.
+Because SVG is a [vector image](https://en.wikipedia.org/wiki/Vector_graphics) format, which means it does not have a fixed bitmap size. However, `UIImage` or `CGImage` are all [bitmap image](https://en.wikipedia.org/wiki/Raster_graphics). For `UIImageView`, we will only parse SVG with a fixed image size (from the SVG viewPort information). But we also support you to specify a desired size during image loading using `SDWebImageContextThumbnailPixelSize` context option. And you can specify whether or not to keep aspect ratio during scale using `SDWebImageContextImagePreserveAspectRatio` context option.
 
 + Objective-C
 
@@ -63,7 +65,7 @@ SDImageSVGKCoder *svgCoder = [SDImageSVGKCoder sharedCoder];
 UIImageView *imageView;
 // this arg is optional, if don't provide, use the viewport size instead
 CGSize svgImageSize = CGSizeMake(100, 100);
-[imageView sd_setImageWithURL:url placeholderImage:nil options:0 context:@{SDWebImageContextSVGKImageSize : @(svgImageSize)];
+[imageView sd_setImageWithURL:url placeholderImage:nil options:0 context:@{SDWebImageContextThumbnailPixelSize : @(svgImageSize)];
 ```
 
 + Swift
@@ -75,7 +77,7 @@ let imageView: UIImageView
 imageView.sd_setImage(with: url)
 // this arg is optional, if don't provide, use the viewport size instead
 let svgImageSize = CGSize(width: 100, height: 100)
-imageView.sd_setImage(with: url, placeholderImage: nil, options: [], context: [.svgkImageSize : svgImageSize])
+imageView.sd_setImage(with: url, placeholderImage: nil, options: [], context: [.imageThumbnailPixelSize : svgImageSize])
 ```
 
 ### Use SVGKImageView (render SVG as vector image)
@@ -120,7 +122,7 @@ NSData *imageData = [image sd_imageDataAsFormat:SDImageFormatSVG];
 + Swift
 
 ```swift
-let image; // Image generated from SDWebImage framework, actually a `SDSVGKImage` instance.
+let image: UIImage // Image generated from SDWebImage framework, actually a `SDSVGKImage` instance.
 let imageData = image.sd_imageData(as: .SVG)
 ```
 
