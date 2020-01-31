@@ -25,10 +25,10 @@ FOUNDATION_EXPORT void SDAdjustSVGContentMode(SVGKImage * __nonnull image, UIVie
  A CGSize raw value which specify the desired SVG image size during image loading. Because vector image like SVG format, may not contains a fixed size, or you want to get a larger size bitmap representation UIImage. (NSValue)
  If you don't provide this value, use viewBox size of SVG for default value;
  */
-FOUNDATION_EXPORT SDWebImageContextOption _Nonnull const SDWebImageContextSVGKImageSize;
+FOUNDATION_EXPORT SDWebImageContextOption _Nonnull const SDWebImageContextSVGKImageSize __attribute__((deprecated("Use the new context option (for WebCache category), or coder option (for SDImageCoder protocol) instead", "SDWebImageContextImageThumbnailPixelSize")));
 
 /**
  A BOOL value which specify the whether SVG image should keep aspect ratio during image loading. Because when you specify image size via `SDWebImageContextSVGKImageSize`, we need to know whether to keep aspect ratio or not when image size aspect ratio is not equal to SVG viewBox size aspect ratio. (NSNumber)
  If you don't provide this value, use YES for default value.
  */
-FOUNDATION_EXPORT SDWebImageContextOption _Nonnull const SDWebImageContextSVGKImagePreserveAspectRatio;
+FOUNDATION_EXPORT SDWebImageContextOption _Nonnull const SDWebImageContextSVGKImagePreserveAspectRatio __attribute__((deprecated("Use the new context option (for WebCache category), or coder option (for SDImageCoder protocol) instead", "SDWebImageContextImagePreserveAspectRatio")));

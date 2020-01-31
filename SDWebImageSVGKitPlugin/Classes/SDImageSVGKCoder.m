@@ -41,6 +41,9 @@
     
     CGSize imageSize = CGSizeZero;
     BOOL preserveAspectRatio = YES;
+    
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
     // Parse args
     SDWebImageContext *context = options[SDImageCoderWebImageContext];
     if (context[SDWebImageContextSVGKImageSize]) {
@@ -50,10 +53,20 @@
 #else
         imageSize = sizeValue.sizeValue;
 #endif
+    } else if (options[SDImageCoderDecodeThumbnailPixelSize]) {
+        NSValue *sizeValue = options[SDImageCoderDecodeThumbnailPixelSize];
+#if SD_UIKIT
+        imageSize = sizeValue.CGSizeValue;
+#else
+        imageSize = sizeValue.sizeValue;
+#endif
     }
     if (context[SDWebImageContextSVGKImagePreserveAspectRatio]) {
         preserveAspectRatio = [context[SDWebImageContextSVGKImagePreserveAspectRatio] boolValue];
+    } else if (options[SDImageCoderDecodePreserveAspectRatio]) {
+        preserveAspectRatio = [options[SDImageCoderDecodePreserveAspectRatio] boolValue];
     }
+#pragma clang diagnostic pop
     
     if (!CGSizeEqualToSize(imageSize, CGSizeZero)) {
         if (preserveAspectRatio) {
