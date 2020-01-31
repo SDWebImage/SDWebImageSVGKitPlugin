@@ -61,18 +61,29 @@
     if (!svgImage) {
         return nil;
     }
+    CGSize imageSize = CGSizeZero;
+    
     // Check specified image size
     SDWebImageContext *context = options[SDImageCoderWebImageContext];
+    #pragma clang diagnostic push
+    #pragma clang diagnostic ignored "-Wdeprecated-declarations"
     if (context[SDWebImageContextSVGKImageSize]) {
         NSValue *sizeValue = context[SDWebImageContextSVGKImageSize];
 #if SD_UIKIT
-        CGSize imageSize = sizeValue.CGSizeValue;
+        imageSize = sizeValue.CGSizeValue;
 #else
-        CGSize imageSize = sizeValue.sizeValue;
+        imageSize = sizeValue.sizeValue;
 #endif
-        if (!CGSizeEqualToSize(imageSize, CGSizeZero)) {
-            svgImage.size = imageSize;
-        }
+    } else if (options[SDImageCoderDecodeThumbnailPixelSize]) {
+        NSValue *sizeValue = options[SDImageCoderDecodeThumbnailPixelSize];
+#if SD_UIKIT
+        imageSize = sizeValue.CGSizeValue;
+#else
+        imageSize = sizeValue.sizeValue;
+#endif
+    }
+    if (!CGSizeEqualToSize(imageSize, CGSizeZero)) {
+        svgImage.size = imageSize;
     }
     return [self initWithSVGKImage:svgImage];
 }

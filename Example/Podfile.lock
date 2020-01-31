@@ -2,9 +2,9 @@ PODS:
   - CocoaLumberjack (3.6.0):
     - CocoaLumberjack/Core (= 3.6.0)
   - CocoaLumberjack/Core (3.6.0)
-  - SDWebImage/Core (5.3.1)
+  - SDWebImage/Core (5.5.2)
   - SDWebImageSVGKitPlugin (1.0.0):
-    - SDWebImage/Core (~> 5.0)
+    - SDWebImage/Core (~> 5.5)
     - SVGKit (>= 2.1)
   - SVGKit (2.1.0):
     - CocoaLumberjack (~> 3.0)
@@ -27,13 +27,13 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   SVGKit:
-    :commit: 39dd210fd47e3195f57f914354ffd2d0b4b8ff1c
+    :commit: 8560ef56bd61e34d5cd8d9739954f9765e3ac794
     :git: https://github.com/SVGKit/SVGKit.git
 
 SPEC CHECKSUMS:
   CocoaLumberjack: 78b0c238666f4f58db069738ec176f4519557516
-  SDWebImage: 7137d57385fb632129838c1e6ab9528a22c666cc
-  SDWebImageSVGKitPlugin: ec8a6a4492d1dc40f5f9fa1dee4acca07f93ad15
+  SDWebImage: 4d5c027c935438f341ed33dbac53ff9f479922ca
+  SDWebImageSVGKitPlugin: 02e1f98cf9ed0814788bba781fad59ac4185dfc4
   SVGKit: 8a2fc74258bdb2abb54d3b65f3dd68b0277a9c4d
 
 PODFILE CHECKSUM: 91804dc9be5d336ef696711e8704688dfe2f0a2a
