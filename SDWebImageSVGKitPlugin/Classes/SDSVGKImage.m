@@ -116,3 +116,31 @@
 }
 
 @end
+
+@implementation SDSVGKImage (Metadata)
+
+- (BOOL)sd_isAnimated {
+    return NO;
+}
+
+- (NSUInteger)sd_imageLoopCount {
+    return self.animatedImageLoopCount;
+}
+
+- (void)setSd_imageLoopCount:(NSUInteger)sd_imageLoopCount {
+    return;
+}
+
+- (SDImageFormat)sd_imageFormat {
+    return SDImageFormatSVG;
+}
+
+- (void)setSd_imageFormat:(SDImageFormat)sd_imageFormat {
+    return;
+}
+
+- (BOOL)sd_isVector {
+    return YES;
+}
+
+@end
