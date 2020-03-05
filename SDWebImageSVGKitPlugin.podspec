@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SDWebImageSVGKitPlugin'
-  s.version          = '1.1.0'
+  s.version          = '1.2.0'
   s.summary          = 'A SVG coder plugin for SDWebImage, using SVGKit.'
 
 # This description is used to generate tags and improve search results.
