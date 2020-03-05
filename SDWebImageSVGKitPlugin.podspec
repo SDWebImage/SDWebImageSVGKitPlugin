@@ -33,6 +33,6 @@ TODO: Add long description of the pod here.
   s.source_files = 'SDWebImageSVGKitPlugin/Classes/**/*', 'SDWebImageSVGKitPlugin/Module/SDWebImageSVGKitPlugin.h'
   s.module_map = 'SDWebImageSVGKitPlugin/Module/SDWebImageSVGKitPlugin.modulemap'
   
-  s.dependency 'SDWebImage/Core', '~> 5.5'
+  s.dependency 'SDWebImage/Core', '~> 5.6'
   s.dependency 'SVGKit', '>= 2.1'
 end

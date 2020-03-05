@@ -39,7 +39,7 @@
             NSAssert(svgData.length > 0, @"SVG Data should exist");
         }
     }];
-    [imageView2 sd_setImageWithURL:SVGURL2 placeholderImage:nil options:SDWebImageRetryFailed context:@{SDWebImageContextSVGKImageSize : @(imageView2.bounds.size)} progress:nil completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
+    [imageView2 sd_setImageWithURL:SVGURL2 placeholderImage:nil options:SDWebImageRetryFailed context:@{SDWebImageContextImageThumbnailPixelSize : @(imageView2.bounds.size)} progress:nil completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
         if (image) {
             NSLog(@"SVG load animation success");
             [NSAnimationContext runAnimationGroup:^(NSAnimationContext * _Nonnull context) {
