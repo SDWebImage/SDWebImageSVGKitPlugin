@@ -26,13 +26,13 @@ TODO: Add long description of the pod here.
   s.author           = { 'DreamPiggy' => 'lizhuoli1126@126.com' }
   s.source           = { :git => 'https://github.com/SDWebImage/SDWebImageSVGKitPlugin.git', :tag => s.version.to_s }
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
   s.tvos.deployment_target = '9.0'
-  s.osx.deployment_target = '10.10'
+  s.osx.deployment_target = '10.11'
 
   s.source_files = 'SDWebImageSVGKitPlugin/Classes/**/*', 'SDWebImageSVGKitPlugin/Module/SDWebImageSVGKitPlugin.h'
   s.module_map = 'SDWebImageSVGKitPlugin/Module/SDWebImageSVGKitPlugin.modulemap'
   
-  s.dependency 'SDWebImage/Core', '~> 5.6'
+  s.dependency 'SDWebImage/Core', '~> 5.10'
   s.dependency 'SVGKit', '>= 2.1'
 end
