@@ -34,5 +34,5 @@ TODO: Add long description of the pod here.
   s.module_map = 'SDWebImageSVGKitPlugin/Module/SDWebImageSVGKitPlugin.modulemap'
   
   s.dependency 'SDWebImage/Core', '~> 5.10'
-  s.dependency 'SVGKit', '>= 2.1'
+  s.dependency 'SVGKit', '~> 3.0'
 end
